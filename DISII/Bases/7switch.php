@@ -16,24 +16,23 @@
             
             switch($x){
                 case 0:
-                    echo '$x stocke la valeur 0';
+                    echo '$x stock la valeur 0';
                     break;
                 case 1:
-                    echo '$x stocke la valeur 1';
+                    echo '$x stock la valeur 1';
                     break;
                 case 2:
-                    echo '$x stocke la valeur 2';
+                    echo '$x stock la valeur 2';
                     break;
                 case 3:
-                    echo '$x stocke la valeur 3';
+                    echo '$x stock la valeur 3';
                     break;
                 case 4:
-                    echo '$x stocke la valeur 4';
+                    echo '$x stock la valeur 4';
                     break;
                 default:
-                    echo '$x ne stocke pas de valeur entre 0 et 4';
-
-
+                    echo '$x ne stock pas de valeur entre 0 et 4';
+            }
       ?> </div>
     </body>
 </html>
