@@ -11,7 +11,8 @@
             echo "<br>J'ai ", $age, " ans.<br>";
             echo "Demain c'est mon anniversaire j'aurais ",++$age;
         ?>
-      <p>++$age va ajouter +1 à la variable age avant de l'afficher<br>
-      si j'avais fait $age++, il aurait affiché la variable $age puis apres il aurait rajouté+1
+      <p>++$age va ajouter +1 Ã  la variable age avant de l'afficher<br>
+      si j'avais fait $age++, il aurait affichÃ© la variable $age puis apres il aurait rajoutÃ©+1
       </p>
     </body>
+</html>
