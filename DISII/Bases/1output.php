@@ -3,6 +3,7 @@
     <head>
         <title>Cours PHP </title>
         <meta charset="utf-8">
+        <link rel="stylesheet" href="php.css">
     </head>
     <body>
       <h1>Cours PHP</h1>
