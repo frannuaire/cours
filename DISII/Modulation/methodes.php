@@ -35,6 +35,43 @@
 
 
 
+              $x = 0;
+               // variable de scope
+            function plus3($p){
+                $p = $p + 3;
+                echo 'Valeur dans la fonction : ' .$p;
+            }
+            
+            plus3($x);
+            echo '<br>Valeur en dehors de la fonction : ' .$x;
+            
+              $x = 0;
+               // passage par référence
+            function plus3(&$p){
+                $p = $p + 3;
+                echo 'Valeur dans la fonction : ' .$p;
+            }
+            
+            plus3($x);
+            echo '<br>Valeur en dehors de la fonction : ' .$x;            
+            
+
+            // parametre par défaut
+            function bonjour($prenom, $role='abonné(e)'){
+                echo 'Bonjour ' .$prenom. ' vous êtes un(e) ' .$role. '.<br>';
+            }
+            
+            bonjour('Mathilde');
+            bonjour('Pierre', 'administrateur');
+            
+            // on déclare le retour en entier
+            function multiple($a, $b): int{
+                return $a * $b;
+            }
+            
+            $ret = multiple(2,3);
+            echo $ret;
+
       ?> </div>
     </body>
 </html>
