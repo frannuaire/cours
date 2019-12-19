@@ -10,6 +10,9 @@
         <?php
         $age=37;
             echo "<br>J'ai ", $age, " ans.<br>";
+            $age = $age+1;
+            $age += 1;
+           
             echo "Demain c'est mon anniversaire j'aurais ",++$age;
         ?>
       <p>++$age va ajouter +1 à la variable age avant de l'afficher<br>
@@ -20,7 +23,9 @@
       <div>
               <?php
           $prenom = "Pierre";
-          $age = 28.5;     // Egal permet l'affectation d'une valeur à une variable.               
+          $nom = 'dupond';
+          $age = 28.5;     // Egal permet l'affectation d'une valeur à une variable.    
+          $personne = $prenom. " ".$nom;           
           echo $prenom. " a ". $age. '<br />';
           
           $prenom = 4;

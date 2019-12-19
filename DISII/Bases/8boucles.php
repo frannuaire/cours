@@ -40,6 +40,14 @@
             for($x = 0; $x <= 5; $x++){    
                 echo '$x contient la valeur ' .$x. '<br>';
             }
+            
+                echo '<h3>Boucle while décrémentielle</h3>';
+            $x=20 ;    
+            while($x >= 10){
+                echo '$x contient la valeur ' .$x. '<br>';
+                $x--;
+            }
+            
 
 
       ?> </div>
