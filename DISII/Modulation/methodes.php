@@ -37,12 +37,12 @@
 
               $x = 0;
                // variable de scope
-            function plus3($p){
+            function plus2($p){
                 $p = $p + 3;
                 echo 'Valeur dans la fonction : ' .$p;
             }
             
-            plus3($x);
+            plus2($x);
             echo '<br>Valeur en dehors de la fonction : ' .$x;
             
               $x = 0;
@@ -57,12 +57,12 @@
             
 
             // parametre par défaut
-            function bonjour($prenom, $role='abonné(e)'){
+            function aff($prenom, $role='abonné(e)'){
                 echo 'Bonjour ' .$prenom. ' vous êtes un(e) ' .$role. '.<br>';
             }
             
-            bonjour('Mathilde');
-            bonjour('Pierre', 'administrateur');
+            aff('Mathilde');
+            aff('Pierre', 'administrateur');
             
             // on déclare le retour en entier
             function multiple($a, $b): int{
