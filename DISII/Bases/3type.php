@@ -14,7 +14,15 @@
               <?php
             $prenom = "Kevin";
             $age = 37; //Stocke le nombre 37
-            $age2 = "28"; //Stocke la chaine de caractères "37"
+            $age2 = "37"; //Stocke la chaine de caractères "37"
+            
+           // cast
+            $age2=(String) $age ;
+            echo gettype($age2);
+            
+            // transtypage
+            $age2=(int) $age2;
+            echo gettype($age2);
             $distance = 2.84;
             
             echo "La variable age $age contient une valeur de type ";

@@ -38,8 +38,8 @@
             $c = $x - $y; //$c stock 2 - 3 = -1
             echo '$a stock ' .$a. ', $b stock ' .$b. ', $c stock ' .$c. '<br>';
             
-            $x = $x * $y; //$x stocke désormais 2 * 3 = 6
-            echo 'La variable $x stock désormais : ' .$x. '<br>';
+            $x = $x * $y; //$x stock désormais 2 * 3 = 6
+            echo 'La variable $x stock désormais : ' .($x * $y). '<br>';
             
             $z = $x / $y; //$z stock désormais 6 / 3 = 2
             echo 'La variable $z stock désormais : ' .$z. '<br>';
