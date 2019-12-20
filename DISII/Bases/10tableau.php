@@ -13,21 +13,21 @@
       <div>
               <?php
             //  declaration d'un tableau
- $prenoms = array('Hasna', 'Delphine', 'Romuald', 'Amaury');
+ $prenoms = array('Hasnaa', 'Delphine', 'Romuald', 'Amaury');
  var_dump($prenoms);
  // ou 
             $ages = [20, 30, 40, 10];
 
 
             // avec clef associatif
-            $ages = ['Hasna' => 20, 'Delphine' => 30, 'Romuald' => 40, 'Amaury'=> 10];
+            $ages = ['Hasnaa' => 20, 'Delphine' => 30, 'Romuald' => 40, 'Amaury'=> 10];
              var_dump($ages);
-            $mails['Hasna'] = 'Hasna@gmail.com';
+            $mails['Hasnaa'] = 'Hasnaa@gmail.com';
             $mails['Delphine'] = 'Delphine@gmail.com';
             $mails['Romuald'] = 'Romuald@gmail.com';
-            $mails['Amaury'] = 'Ammaury@gmail.com';
+            $mails['Amaury'] = 'Amaury@gmail.com';
             
-            
+            echo $prenoms[0].' a '.$ages['Hasnaa']. ' a pour mail'. $mails['Hasnaa'];
             
             /*Tableau multidimensionnel numéroté stockant
              *des tableaux numérotés*/
@@ -36,14 +36,23 @@
                 [1, 3, 9, 27, 81]
             ];
             
+            
             /*Tableau multidimensionnel numéroté stockant
              *des tableaux associatifs et une valeur simple*/
             $utilisateurs = [
                 ['nom' => 'Delphine', 'mail' => 'Delphine@gmail.com'],
                 ['nom' => 'Romuald', 'mail' => 'Romuald@gmail.com'],
-                ['nom' => 'Amandine', 'mail' => 'Ammaury@gmail.com'] 
+                ['nom' => 'Amaury', 'mail' => 'Amaury@gmail.com'] 
             ];
-            
+            foreach($utilisateurs as $utilisateur){
+                echo '<br />Nom : '.$utilisateur['nom'];
+                echo '<br />Mail : '.$utilisateur['mail'];
+                echo '<hr>';
+                
+                 
+              //  var_dump($utilisateur);
+            }
+             //   var_dump($utilisateurs);
             /*Tableau multidimensionnel associatif stockant
              *des tableaux associatifs*/
             $produits = [
