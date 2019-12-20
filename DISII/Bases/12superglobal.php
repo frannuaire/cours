@@ -7,17 +7,17 @@
     </head>
     <body>
       <h1>Cours PHP</h1>
-      <h2>Inclure un fichier externe</h2>
+      <h2>les supperglobales</h2>
         
       <br />
       <div>
               <?php
-        require('8boucles.php');
-        
-
-      ?> </div>
-      <?php 
-          include_once("9bfichier_ext.php");
+if(isset($_GET['prenom'])){
+                echo 'Bonjour,' .$_GET['prenom'];
+            }
+            else{
+            echo 'Qui êtes vous?';
+            }
       ?>
     </body>
 </html>

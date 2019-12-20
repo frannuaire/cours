@@ -7,7 +7,7 @@
     </head>
     <body>
       <h1>Cours PHP</h1>
-      <h2>les boucles</h2>
+      <h2>les Tableaux</h2>
         
       <br />
       <div>
