@@ -24,10 +24,10 @@
             date_default_timezone_set('Europe/Moscow');
             echo date('d-m-Y h:i:s'). '<br>';
             
-            /* Par défaut, les dates vont être renvoyées en anglais par la plupart des serveurs. 
-            Pour transformer une date en anglais vers du français, 
-            nous avons plusieurs solutions mais une est recommandée par les éditeurs du PHP :
-            l’utilisation des fonctions setlocale() et strftime().
+            /* Par dÃ©faut, les dates vont Ãªtre renvoyÃ©es en anglais par la plupart des serveurs. 
+            Pour transformer une date en anglais vers du franÃ§ais, 
+            nous avons plusieurs solutions mais une est recommandÃ©e par les Ã©diteurs du PHP :
+            lâ€™utilisation des fonctions setlocale() et strftime().
             */
                echo strftime('%A %d %B %Y %I:%M:%S'). '<br>';
             setlocale(LC_TIME, ['fr', 'fra', 'fr_FR']);

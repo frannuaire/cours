@@ -14,13 +14,14 @@
               <?php
             //  declaration d'un tableau
  $prenoms = array('Hasna', 'Delphine', 'Romuald', 'Amaury');
+ var_dump($prenoms);
  // ou 
             $ages = [20, 30, 40, 10];
 
 
             // avec clef associatif
             $ages = ['Hasna' => 20, 'Delphine' => 30, 'Romuald' => 40, 'Amaury'=> 10];
-            
+             var_dump($ages);
             $mails['Hasna'] = 'Hasna@gmail.com';
             $mails['Delphine'] = 'Delphine@gmail.com';
             $mails['Romuald'] = 'Romuald@gmail.com';

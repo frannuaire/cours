@@ -13,11 +13,21 @@
       <div>
               <?php
 if(isset($_GET['prenom'])){
-                echo 'Bonjour,' .$_GET['prenom'];
+                echo 'Bonjour, ' .$_GET['prenom'];
             }
-            else{
-            echo 'Qui �tes vous?';
+            elseif(isset($_POST['nom'])){
+                echo 'Bonjour,' .$_POST['nom'];
+                echo '<br> tu as ' .$_POST['age'];
+            }else{
+            echo 'Qui êtes vous?';
             }
+            
       ?>
+      
+      <form action="./12superglobal.php" method="post">
+ <p>Votre nom : <input type="text" name="nom" /></p>
+ <p>Votre âge : <input type="text" name="age" /></p>
+ <p><input type="submit" value="OK"></p>
+</form>
     </body>
 </html>
