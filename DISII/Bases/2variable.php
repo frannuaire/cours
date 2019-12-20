@@ -22,6 +22,11 @@
       <br />
       <div>
               <?php
+                          define('TVA10', 10);
+                          define('TVA20', 20);
+                           define('TVA55', 5.5);
+                           echo '<br>La tva dans la restauration est à '.TVA55.'<br> mais l\'alcool est à '. TVA20;
+                          
           $prenom = "Pierre";
           $nom = 'dupond';
           $age = 28.5;     // Egal permet l'affectation d'une valeur à une variable.    
