@@ -1,0 +1,8 @@
+
+$art1['titre']='Nike air';
+$art1['prix']=100;
+$art1['description']='Pratique pour courir';
+
+$art1['titre']='Addidas forest grouve';
+$art1['prix']=64;
+$art1['description']='Idéal pour courir';
