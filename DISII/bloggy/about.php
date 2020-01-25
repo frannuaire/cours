@@ -1,76 +1,11 @@
 	<!DOCTYPE html>
 	<html lang="zxx" class="no-js">
 	<head>
-		<!-- Mobile Specific Meta -->
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<!-- Favicon-->
-		<link rel="shortcut icon" href="img/fav.png">
-		<!-- Author Meta -->
-		<meta name="author" content="colorlib">
-		<!-- Meta Description -->
-		<meta name="description" content="">
-		<!-- Meta Keyword -->
-		<meta name="keywords" content="">
-		<!-- meta character set -->
-		<meta charset="UTF-8">
-		<!-- Site Title -->
-		<title>Macro</title>
-
-		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
-			<!--
-			CSS
-			============================================= -->
-			<link rel="stylesheet" href="css/linearicons.css">
-			<link rel="stylesheet" href="css/font-awesome.min.css">
-			<link rel="stylesheet" href="css/bootstrap.css">
-			<link rel="stylesheet" href="css/magnific-popup.css">
-			<link rel="stylesheet" href="css/jquery-ui.css">				
-			<link rel="stylesheet" href="css/nice-select.css">							
-			<link rel="stylesheet" href="css/animate.min.css">
-			<link rel="stylesheet" href="css/owl.carousel.css">				
-			<link rel="stylesheet" href="css/main.css">
+		<?php include 'head.php'; ?>
 		</head>
 		<body>	
 			<header id="header">
-				<div class="header-top">
-					<div class="container">
-				  		<div class="row justify-content-center">
-						      <div id="logo">
-						        <a href="index.html"><img src="img/logo.png" alt="" title="" /></a>
-						      </div>
-				  		</div>			  					
-					</div>
-				</div>
-				<div class="container main-menu">
-					<div class="row align-items-center justify-content-center d-flex">			
-				      <nav id="nav-menu-container">
-				        <ul class="nav-menu">
-				          <li><a href="index.html">Home</a></li>
-				          <li><a href="about.html">About</a></li>
-				          <li><a href="menu.html">Menu</a></li>
-				          <li><a href="gallery.html">Gallery</a></li>
-				          <li class="menu-has-children"><a href="">Blog</a>
-				            <ul>
-				              <li><a href="blog-home.html">Blog Home</a></li>
-				              <li><a href="blog-single.html">Blog Single</a></li>
-				            </ul>
-				          </li>	
-				          <li class="menu-has-children"><a href="">Pages</a>
-				            <ul>
-				            	  <li><a href="elements.html">Elements</a></li>
-						          <li class="menu-has-children"><a href="">Level 2 </a>
-						            <ul>
-						              <li><a href="#">Item One</a></li>
-						              <li><a href="#">Item Two</a></li>
-						            </ul>
-						          </li>					                		
-				            </ul>
-				          </li>					          					          		          
-				          <li><a href="contact.html">Contact</a></li>
-				        </ul>
-				      </nav><!-- #nav-menu-container -->					      		  
-					</div>
-				</div>
+				<?php include 'header.php'; ?>
 			</header><!-- #header -->
 			
 			<!-- start banner Area -->
@@ -129,7 +64,7 @@
 									<h4>Bread Fruit Cheese Sandwich</h4>
 								</a>
 								<p>
-									inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct women face higher conduct.
+									inappropriate behavior is often laughed off as “boys will be boys,�? women face higher conduct women face higher conduct.
 								</p>								
 							</div>
 						</div>
@@ -142,7 +77,7 @@
 									<h4>Beef Cutlet with Spring Onion</h4>
 								</a>	
 								<p>
-									inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct women face higher conduct.
+									inappropriate behavior is often laughed off as “boys will be boys,�? women face higher conduct women face higher conduct.
 								</p>
 							</div>
 						</div>
@@ -155,7 +90,7 @@
 									<h4>Meat with sauce & Vegetables</h4>
 								</a>	
 								<p>
-									inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct women face higher conduct.
+									inappropriate behavior is often laughed off as “boys will be boys,�? women face higher conduct women face higher conduct.
 								</p>
 							</div>
 						</div>												
@@ -180,7 +115,7 @@
 									<span class="fa fa-star"></span>								
 								</div>	
 								<p>
-									“Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.”
+									“Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.�?
 								</p>
 							</div>
 							<div class="single-review">
@@ -194,7 +129,7 @@
 									<span class="fa fa-star"></span>								
 								</div>	
 								<p>
-									“Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.”
+									“Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.�?
 								</p>
 							</div>	
 							<div class="single-review">
@@ -208,7 +143,7 @@
 									<span class="fa fa-star"></span>								
 								</div>	
 								<p>
-									“Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.”
+									“Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.�?
 								</p>
 							</div>
 							<div class="single-review">
@@ -222,7 +157,7 @@
 									<span class="fa fa-star"></span>								
 								</div>	
 								<p>
-									“Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.”
+									“Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.�?
 								</p>
 							</div>														
 						</div>
