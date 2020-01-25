@@ -26,7 +26,7 @@ if (isset($_POST['mail'])) {
      
         if (password_verify($_POST['mdp'], $mdp)) {
             if ($_SESSION['role'] == 'admin') {
-                header('Location: ./admin/');
+                header('Location: ./admin/index.php?page=categorie&action=listing');
             } else {
                 header('Location: /');
             }
