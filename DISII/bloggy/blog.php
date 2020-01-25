@@ -1,23 +1,23 @@
-<?php
+ï»¿<?php
 
 /**
- * Connexion à la base de données
+ * Connexion Ã  la base de donnÃ©es
  */
 $pdo = new PDO(
     'mysql:host=localhost;dbname=bloggy',
     'root',
     ''
 );
-
+//echo password_hash('620000', PASSWORD_BCRYPT);die;
 /**
- * Requete pour récupérer tous les articles du site.
+ * Requete pour rÃ©cupÃ©rer tous les articles du site.
  */
-$sql =  'select idArticles, art_creation, titre, metaDescription, vues, categories.nom, utilisateurs.nom '
+$sql =  'select idArticles, art_creation,contenu, titre, metaDescription, vues, categories.nom as cat, CONCAT(utilisateurs.nom," ",utilisateurs.prenom) as user '
         . ' from articles inner join utilisateurs on utilisateurs.idUtilisateurs = articles.Utilisateurs_idUtilisateurs'
         . ' inner join categories on categories.idCategories = articles.Categorie_idCategories '
         . ' order by art_creation desc';
 
-// pour executer et parcourir le résultat de la requete.
+// pour executer et parcourir le rÃ©sultat de la requete.
 /*
 foreach  ($pdo->query($sql) as $row) {
     echo $row['titre'];
@@ -27,78 +27,13 @@ foreach  ($pdo->query($sql) as $row) {
 ?>
 
 <!DOCTYPE html>
-	<html lang="zxx" class="no-js">
+	<html lang="fr-fr" class="no-js">
 	<head>
-		<!-- Mobile Specific Meta -->
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<!-- Favicon-->
-		<link rel="shortcut icon" href="img/fav.png">
-		<!-- Author Meta -->
-		<meta name="author" content="colorlib">
-		<!-- Meta Description -->
-		<meta name="description" content="">
-		<!-- Meta Keyword -->
-		<meta name="keywords" content="">
-		<!-- meta character set -->
-		<meta charset="UTF-8">
-		<!-- Site Title -->
-		<title>Macro</title>
-
-		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
-			<!--
-			CSS
-			============================================= -->
-			<link rel="stylesheet" href="css/linearicons.css">
-			<link rel="stylesheet" href="css/font-awesome.min.css">
-			<link rel="stylesheet" href="css/bootstrap.css">
-			<link rel="stylesheet" href="css/magnific-popup.css">
-			<link rel="stylesheet" href="css/jquery-ui.css">				
-			<link rel="stylesheet" href="css/nice-select.css">							
-			<link rel="stylesheet" href="css/animate.min.css">
-			<link rel="stylesheet" href="css/owl.carousel.css">				
-			<link rel="stylesheet" href="css/main.css">
+		<?php include 'head.php'; ?>
 		</head>
 		<body>	
 			<header id="header">
-				<div class="header-top">
-					<div class="container">
-				  		<div class="row justify-content-center">
-						      <div id="logo">
-						        <a href="index.html"><img src="img/logo.png" alt="" title="" /></a>
-						      </div>
-				  		</div>			  					
-					</div>
-				</div>
-				<div class="container main-menu">
-					<div class="row align-items-center justify-content-center d-flex">			
-				      <nav id="nav-menu-container">
-				        <ul class="nav-menu">
-				          <li><a href="index.html">Home</a></li>
-				          <li><a href="about.html">About</a></li>
-				          <li><a href="menu.html">Menu</a></li>
-				          <li><a href="gallery.html">Gallery</a></li>
-				          <li class="menu-has-children"><a href="">Blog</a>
-				            <ul>
-				              <li><a href="blog-home.html">Blog Home</a></li>
-				              <li><a href="blog-single.html">Blog Single</a></li>
-				            </ul>
-				          </li>	
-				          <li class="menu-has-children"><a href="">Pages</a>
-				            <ul>
-				            	  <li><a href="elements.html">Elements</a></li>
-						          <li class="menu-has-children"><a href="">Level 2 </a>
-						            <ul>
-						              <li><a href="#">Item One</a></li>
-						              <li><a href="#">Item Two</a></li>
-						            </ul>
-						          </li>					                		
-				            </ul>
-				          </li>					          					          		          
-				          <li><a href="contact.html">Contact</a></li>
-				        </ul>
-				      </nav><!-- #nav-menu-container -->					      		  
-					</div>
-				</div>
+				<?php include 'header.php'; ?>
 			</header><!-- #header -->
 
 			<!-- start banner Area -->
@@ -108,8 +43,7 @@ foreach  ($pdo->query($sql) as $row) {
 					<div class="row d-flex align-items-center justify-content-center">
 						<div class="about-content blog-header-content col-lg-12">
 							<h1 class="text-white">
-								Dude Youâ€™re Getting
-								a Telescope				
+								Liste des mes articles é.				
 							</h1>	
 							<p class="text-white">
 								There is a moment in the life of any aspiring astronomer that it is time to buy that first
@@ -182,10 +116,12 @@ foreach  ($pdo->query($sql) as $row) {
 			<!-- End top-category-widget Area -->
 			
 			<!-- Start post-content Area -->
-			<section class="post-content-area">
+              
+	<section class="post-content-area">
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-8 posts-list">
+                                                     <?php         foreach  ($pdo->query($sql) as $row) { ?>
 							<div class="single-post row">
 								<div class="col-lg-3  col-md-3 meta-details">
 									<ul class="tags">
@@ -195,9 +131,9 @@ foreach  ($pdo->query($sql) as $row) {
 										<li><a href="#">Lifestyle</a></li>
 									</ul>
 									<div class="user-details row">
-										<p class="user-name col-lg-12 col-md-12 col-6"><a href="#">Mark wiens</a> <span class="lnr lnr-user"></span></p>
-										<p class="date col-lg-12 col-md-12 col-6"><a href="#">12 Dec, 2017</a> <span class="lnr lnr-calendar-full"></span></p>
-										<p class="view col-lg-12 col-md-12 col-6"><a href="#">1.2M Views</a> <span class="lnr lnr-eye"></span></p>
+										<p class="user-name col-lg-12 col-md-12 col-6"><a href="#"><?= $row['user'];?></a> <span class="lnr lnr-user"></span></p>
+										<p class="date col-lg-12 col-md-12 col-6"><a href="#"><?= $row['art_creation'];?></a> <span class="lnr lnr-calendar-full"></span></p>
+										<p class="view col-lg-12 col-md-12 col-6"><a href="#"><?= $row['vues'];?> Views</a> <span class="lnr lnr-eye"></span></p>
 										<p class="comments col-lg-12 col-md-12 col-6"><a href="#">06 Comments</a> <span class="lnr lnr-bubble"></span></p>						
 									</div>
 								</div>
@@ -205,117 +141,16 @@ foreach  ($pdo->query($sql) as $row) {
 									<div class="feature-img">
 										<img class="img-fluid" src="img/blog/feature-img1.jpg" alt="">
 									</div>
-									<a class="posts-title" href="blog-single.html"><h3>Astronomy Binoculars A Great Alternative</h3></a>
+									<a class="posts-title" href="blog-single.html"><h3><?=$row['titre']; ?></h3></a>
 									<p class="excert">
-										MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction.
-									</p>
+										<?= $row['contenu']; ?>
+                                                                        </p>
 									<a href="blog-single.html" class="primary-btn">View More</a>
 								</div>
 							</div>
-							<div class="single-post row">
-								<div class="col-lg-3  col-md-3 meta-details">
-									<ul class="tags">
-										<li><a href="#">Food,</a></li>
-										<li><a href="#">Technology,</a></li>
-										<li><a href="#">Politics,</a></li>
-										<li><a href="#">Lifestyle</a></li>
-									</ul>
-									<div class="user-details row">
-										<p class="user-name col-lg-12 col-md-12 col-6"><a href="#">Mark wiens</a> <span class="lnr lnr-user"></span></p>
-										<p class="date col-lg-12 col-md-12 col-6"><a href="#">12 Dec, 2017</a> <span class="lnr lnr-calendar-full"></span></p>
-										<p class="view col-lg-12 col-md-12 col-6"><a href="#">1.2M Views</a> <span class="lnr lnr-eye"></span></p>
-										<p class="comments col-lg-12 col-md-12 col-6"><a href="#">06 Comments</a> <span class="lnr lnr-bubble"></span></p>						
-									</div>
-								</div>
-								<div class="col-lg-9 col-md-9 ">
-									<div class="feature-img">
-										<img class="img-fluid" src="img/blog/feature-img2.jpg" alt="">
-									</div>
-									<a class="posts-title" href="blog-single.html"><h3>The Basics Of Buying A Telescope</h3></a>
-									<p class="excert">
-										MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction.
-									</p>
-									<a href="blog-single.html" class="primary-btn">View More</a>
-								</div>
-							</div>
-							<div class="single-post row">
-								<div class="col-lg-3  col-md-3 meta-details">
-									<ul class="tags">
-										<li><a href="#">Food,</a></li>
-										<li><a href="#">Technology,</a></li>
-										<li><a href="#">Politics,</a></li>
-										<li><a href="#">Lifestyle</a></li>
-									</ul>
-									<div class="user-details row">
-										<p class="user-name col-lg-12 col-md-12 col-6"><a href="#">Mark wiens</a> <span class="lnr lnr-user"></span></p>
-										<p class="date col-lg-12 col-md-12 col-6"><a href="#">12 Dec, 2017</a> <span class="lnr lnr-calendar-full"></span></p>
-										<p class="view col-lg-12 col-md-12 col-6"><a href="#">1.2M Views</a> <span class="lnr lnr-eye"></span></p>
-										<p class="comments col-lg-12 col-md-12 col-6"><a href="#">06 Comments</a> <span class="lnr lnr-bubble"></span></p>						
-									</div>
-								</div>
-								<div class="col-lg-9 col-md-9">
-									<div class="feature-img">
-										<img class="img-fluid" src="img/blog/feature-img3.jpg" alt="">
-									</div>
-									<a class="posts-title" href="blog-single.html"><h3>The Glossary Of Telescopes</h3></a>
-									<p class="excert">
-										MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction.
-									</p>
-									<a href="blog-single.html" class="primary-btn">View More</a>
-								</div>
-							</div>
-							<div class="single-post row">
-								<div class="col-lg-3  col-md-3 meta-details">
-									<ul class="tags">
-										<li><a href="#">Food,</a></li>
-										<li><a href="#">Technology,</a></li>
-										<li><a href="#">Politics,</a></li>
-										<li><a href="#">Lifestyle</a></li>
-									</ul>
-									<div class="user-details row">
-										<p class="user-name col-lg-12 col-md-12 col-6"><a href="#">Mark wiens</a> <span class="lnr lnr-user"></span></p>
-										<p class="date col-lg-12 col-md-12 col-6"><a href="#">12 Dec, 2017</a> <span class="lnr lnr-calendar-full"></span></p>
-										<p class="view col-lg-12 col-md-12 col-6"><a href="#">1.2M Views</a> <span class="lnr lnr-eye"></span></p>
-										<p class="comments col-lg-12 col-md-12 col-6"><a href="#">06 Comments</a> <span class="lnr lnr-bubble"></span></p>						
-									</div>
-								</div>
-								<div class="col-lg-9 col-md-9">
-									<div class="feature-img">
-										<img class="img-fluid" src="img/blog/feature-img4.jpg" alt="">
-									</div>
-									<a class="posts-title" href="blog-single.html"><h3>The Night Sky</h3></a>
-									<p class="excert">
-										MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction.
-									</p>
-									<a href="blog-single.html" class="primary-btn">View More</a>
-								</div>
-							</div>
-							<div class="single-post row">
-								<div class="col-lg-3 col-md-3 meta-details">
-									<ul class="tags">
-										<li><a href="#">Food,</a></li>
-										<li><a href="#">Technology,</a></li>
-										<li><a href="#">Politics,</a></li>
-										<li><a href="#">Lifestyle</a></li>
-									</ul>
-									<div class="user-details row">
-										<p class="user-name col-lg-12 col-md-12 col-6"><a href="#">Mark wiens</a> <span class="lnr lnr-user"></span></p>
-										<p class="date col-lg-12 col-md-12 col-6"><a href="#">12 Dec, 2017</a> <span class="lnr lnr-calendar-full"></span></p>
-										<p class="view col-lg-12 col-md-12 col-6"><a href="#">1.2M Views</a> <span class="lnr lnr-eye"></span></p>
-										<p class="comments col-lg-12 col-md-12 col-6"><a href="#">06 Comments</a> <span class="lnr lnr-bubble"></span></p>						
-									</div>
-								</div>
-								<div class="col-lg-9 col-md-9">
-									<div class="feature-img">
-										<img class="img-fluid" src="img/blog/feature-img5.jpg" alt="">
-									</div>
-									<a class="posts-title" href="blog-single.html"><h3>Telescopes 101</h3></a>
-									<p class="excert">
-										MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction.
-									</p>
-									<a href="blog-single.html" class="primary-btn">View More</a>
-								</div>
-							</div>														
+                                                    
+                                                     <?php } ?>
+																			
 		                    <nav class="blog-pagination justify-content-center d-flex">
 		                        <ul class="pagination">
 		                            <li class="page-item">
