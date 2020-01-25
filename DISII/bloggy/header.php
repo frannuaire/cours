@@ -21,7 +21,7 @@
                     </ul>
                 </li>	 			          					          		          
                 <li><a href="contact.php">Contact</a></li>
-                <li><a href="login.php">Login</a></li>
+                <li><a href="login2.php">Login</a></li>
             </ul>
         </nav><!-- #nav-menu-container -->					      		  
     </div>
