@@ -1,9 +1,20 @@
 <?php
+
 require 'models/categorie.php';
-if($_GET['action']=='listing'){
-    $vue['titre']='Listing categorie';
-    
-    $vue['listing']=listing();
- //   $vue['html']=renderListing(listing());
-    
+
+switch ($_GET['action']) {
+    case 'listing':
+        $vue['titre'] = 'Listing categorie';
+        $vue['listing'] = listing();
+        break;
+    case 'edit':
+        $vue['titre'] = 'Modification categorie';
+        $vue['form'] = edit($_GET['id']);
+        break;
+    case 'update':
+        update($_POST['idCategories']);
+        header("Location: ./index.php?page=categorie&action=listing");
+        break;
+    default:
+        break;
 }
