@@ -6,7 +6,9 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
             <a class="nav-item nav-link active" href="./">Accueil <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="./index.php?page=categorie&action=listing">Categorie</a>
+            <a class="nav-item nav-link" href="./index.php?page=categorie&action=listing">Categories</a>
+            <a class="nav-item nav-link" href="./index.php?page=utilisateur&action=listing">Utilisateurs</a>
+            <a class="nav-item nav-link" href="./index.php?page=article&action=listing">Articles</a>
             <a class="nav-item nav-link" href="./index.php?page=utilisateurs&action=listing">Login/Logout</a>
         </div>
     </div>
