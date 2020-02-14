@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-//if($_SESSION['role']=='admin'){
+if($_SESSION['role']=='admin'){
 $page = isset($_GET['page']) ? $_GET['page'] : 'categorie';
 
 // Routeur (gestion des routes)
@@ -17,10 +17,10 @@ if (array_key_exists($page, $pages)) {
     require('controllers/' . $pages[$page]);
     require('views/vue.php');
 }else{
-  echo "</br><p style='color:red'>Petit malin!!!</p>";
+  echo "</br><p style='color:red'>Petit malin erreur 404 !!!</p>";
 }
 
-/*}else{
+}else{
     echo "vous n'avez pas le droit d'etre ici bye...";
-}*/
+}
 

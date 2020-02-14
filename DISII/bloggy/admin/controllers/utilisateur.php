@@ -7,3 +7,8 @@ if($_GET['action']=='listing'){
  //   $vue['html']=renderListing(listing());
     
 }
+if($_GET['action']=='logout'){
+    session_destroy();
+     header("Location: ../../");
+    
+}
