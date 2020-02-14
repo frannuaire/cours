@@ -9,7 +9,7 @@
             <a class="nav-item nav-link" href="./index.php?page=categorie&action=listing">Categories</a>
             <a class="nav-item nav-link" href="./index.php?page=utilisateur&action=listing">Utilisateurs</a>
             <a class="nav-item nav-link" href="./index.php?page=article&action=listing">Articles</a>
-            <a class="nav-item nav-link" href="./index.php?page=utilisateurs&action=listing">Login/Logout</a>
+            <a class="nav-item nav-link" href="./index.php?page=utilisateur&action=logout">Login/Logout</a>
         </div>
     </div>
 </nav>
