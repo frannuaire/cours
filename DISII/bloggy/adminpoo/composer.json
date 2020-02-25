@@ -1,0 +1,9 @@
+{
+    "autoload": {
+        "psr-4": {"Mvcdisii\\": ["controllers/", "models/", "src/"] }
+    },
+    "require": {
+        "twig/twig": "^2.12",
+        "smarty/smarty": "^3.1"
+    }
+}
