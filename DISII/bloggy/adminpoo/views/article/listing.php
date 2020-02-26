@@ -1,3 +1,4 @@
+
 <table class='table'>
     <thead><tr>
             <td>Id</td>
@@ -11,7 +12,7 @@
         foreach ($vue['listing'] as $utilisateurs) {
             echo '<tr>';
             foreach ($utilisateurs as $clef => $valeur) {
-                // si c'est l'id de la table je créer mes liens d'action
+                // si c'est l'id de la table je crï¿½er mes liens d'action
                 if($clef=='idArticles'){
                 ?>
     <td><a title="modifier" href="./index.php?page=article&action=edit&id=<?=$valeur;?>">+</a>&nbsp;

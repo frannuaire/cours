@@ -1,8 +1,11 @@
 <?php
-require 'models/article.php';
+//require 'models/article.php';
+ use Mvcdisii\ArticleModels;
+$article = new ArticleModels();
 if($_GET['action']=='listing'){
-    $vue['titre']='Listing Articles';    
-    $vue['listing']=listing();
+        $smarty->assign('titre','Listing Article');
+        $smarty->assign('listing',$article->listing());
+
    
 }
 if($_GET['action']=='add'){

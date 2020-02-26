@@ -3,7 +3,7 @@
         "psr-4": {"Mvcdisii\\": ["controllers/", "models/", "src/"] }
     },
     "require": {
-        "twig/twig": "^2.12",
-        "smarty/smarty": "^3.1"
+        "smarty/smarty": "^3.1",
+        "psr/log": "^1.1"
     }
 }
