@@ -6,20 +6,10 @@ namespace Composer\Autoload;
 
 class ComposerStaticInitec559ac4d5a54bab1d962b1c3f454eaa
 {
-    public static $files = array (
-        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
-        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
-    );
-
     public static $prefixLengthsPsr4 = array (
-        'T' => 
+        'P' => 
         array (
-            'Twig\\' => 5,
-        ),
-        'S' => 
-        array (
-            'Symfony\\Polyfill\\Mbstring\\' => 26,
-            'Symfony\\Polyfill\\Ctype\\' => 23,
+            'Psr\\Log\\' => 8,
         ),
         'M' => 
         array (
@@ -28,33 +18,15 @@ class ComposerStaticInitec559ac4d5a54bab1d962b1c3f454eaa
     );
 
     public static $prefixDirsPsr4 = array (
-        'Twig\\' => 
+        'Psr\\Log\\' => 
         array (
-            0 => __DIR__ . '/..' . '/twig/twig/src',
-        ),
-        'Symfony\\Polyfill\\Mbstring\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
-        ),
-        'Symfony\\Polyfill\\Ctype\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
+            0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
         ),
         'Mvcdisii\\' => 
         array (
             0 => __DIR__ . '/../..' . '/controllers',
             1 => __DIR__ . '/../..' . '/models',
             2 => __DIR__ . '/../..' . '/src',
-        ),
-    );
-
-    public static $prefixesPsr0 = array (
-        'T' => 
-        array (
-            'Twig_' => 
-            array (
-                0 => __DIR__ . '/..' . '/twig/twig/lib',
-            ),
         ),
     );
 
@@ -239,7 +211,6 @@ class ComposerStaticInitec559ac4d5a54bab1d962b1c3f454eaa
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitec559ac4d5a54bab1d962b1c3f454eaa::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitec559ac4d5a54bab1d962b1c3f454eaa::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitec559ac4d5a54bab1d962b1c3f454eaa::$prefixesPsr0;
             $loader->classMap = ComposerStaticInitec559ac4d5a54bab1d962b1c3f454eaa::$classMap;
 
         }, null, ClassLoader::class);

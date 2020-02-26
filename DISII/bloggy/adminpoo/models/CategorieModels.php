@@ -1,4 +1,5 @@
 <?php
+
 namespace Mvcdisii;
 
 /**
@@ -6,38 +7,11 @@ namespace Mvcdisii;
  * Gère l'acces aux données de la categorie.
  * @author Disii cci
  */
-class CategorieModels {
-    /**
-     * Instance de PDO
-     * @var PDO 
-     */
-    private $db;
-    /**
-     * Constructeur 
-     */
-    public function __construct(){
-        $this->db = $this->connection();
-    }
-    
-    /**
-     * Connection à la bdd avec PDO
-     * @return \PDO
-     */
-    public function connection() {
-        try {
-            return new \PDO('mysql:host=localhost;dbname=bloggy', 'root', '');
-        } catch (Exception $ex) {
-            echo $ex->getMessage();
-        }
-    }
+class CategorieModels extends Models {
 
-    /**
-     * Retourne le tableau des categories
-     * @return Array
-     */
-    public function listing() {     
-        $sql = 'select *  from categories';
-        return $this->db->query($sql, \PDO::FETCH_ASSOC);
+    public function __construct() {
+        parent::__construct();
+        $this->table = 'categories';
     }
 
     function edit($unId) {

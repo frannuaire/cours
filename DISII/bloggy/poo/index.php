@@ -1,8 +1,26 @@
 <?php
+
+require_once 'Aliments.php';
+require_once 'Fruits.php';
+
+
+$citron = new Fruits(200, 'Citron', 'Yellow', 'Acide');
+
+
+echo $citron->getNom();
+echo $citron->getCouleur();
+$citron->setCouleur("Green");
+echo $citron->getCouleur();
+echo $citron->getValEnergetique();
+
+        
+
+/*
 require_once 'Stylo.php';
 require_once 'Voiture.php';
 require_once 'Model.php';
 require_once 'Marque.php';
+
 
 $bic = new Stylo(10, 'red');
 echo $bic->ecrire("Mon text<br/>");
@@ -32,3 +50,5 @@ foreach($chevrolet->getModels() as $model){
         echo $voiture->getImmat().'<br />';
     }
 }
+ * 
+ */
