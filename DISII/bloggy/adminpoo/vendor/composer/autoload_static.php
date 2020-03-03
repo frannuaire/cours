@@ -14,6 +14,7 @@ class ComposerStaticInitec559ac4d5a54bab1d962b1c3f454eaa
         'M' => 
         array (
             'Mvcdisii\\' => 9,
+            'Monolog\\' => 8,
         ),
     );
 
@@ -27,6 +28,10 @@ class ComposerStaticInitec559ac4d5a54bab1d962b1c3f454eaa
             0 => __DIR__ . '/../..' . '/controllers',
             1 => __DIR__ . '/../..' . '/models',
             2 => __DIR__ . '/../..' . '/src',
+        ),
+        'Monolog\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
         ),
     );
 

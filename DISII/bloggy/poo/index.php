@@ -2,16 +2,45 @@
 
 require_once 'Aliments.php';
 require_once 'Fruits.php';
+require_once 'utilisateur.php';
+require_once 'DbConnect.php';
+require_once 'TVA.php';
+/*
+echo 'La TVA pour l\'alcool est a '.TVA::TVAUsuelle; 
 
+die;
+$db = DbConnect::getInstance()->getDb();
+ $sql = 'select * from categories';
+ foreach($db->query($sql) as $cat){
+     var_dump($cat);
+ }
 
+$junior = new Utilisateur("Junior", "t@1.fr");
+if(Utilisateur::verifMdp("adb")){
+    echo "Bravo";
+}else{
+    echo "Dommage";
+}
+
+die;
+  */      
 $citron = new Fruits(200, 'Citron', 'Yellow', 'Acide');
 
-
+echo Fruits::getNbFruits();echo "</br>";
+$orange = new Fruits(200, 'Orange', 'Orange', 'Acide');
+echo Fruits::getNbFruits();echo "</br>";
+echo $orange->getNom();
+echo "</br>";
 echo $citron->getNom();
+$orange=null;
+
+echo "</br>";echo "</br>";
 echo $citron->getCouleur();
+echo "</br>";
 $citron->setCouleur("Green");
 echo $citron->getCouleur();
 echo $citron->getValEnergetique();
+echo "</br>";
 
         
 
