@@ -4,7 +4,9 @@ namespace Mvcdisii;
 
 /**
  * Description of Models
- *
+ * Classe parente abstraite 
+ * pour gérer les méthodes communes
+ * des différents modèles.
  * @author SIO
  */
 abstract class Models {
@@ -14,7 +16,7 @@ abstract class Models {
      * @var PDO 
      */
     protected $db;
-    
+
     /**
      *
      * @var String 
@@ -25,27 +27,17 @@ abstract class Models {
      * Constructeur 
      */
     public function __construct() {
-        $this->db = $this->connection();
+        $this->db = DbConnect::getInstance()
+                ->getDb();
+        //  $this->db = $this->connection();
     }
 
     /**
-     * Connection à la bdd avec PDO
-     * @return \PDO
-     */
-    public function connection() {
-        try {
-            return new \PDO('mysql:host=localhost;dbname=bloggy', 'root', '');
-        } catch (Exception $ex) {
-            echo $ex->getMessage();
-        }
-    }
-    
-        /**
      * Retourne le tableau des categories
      * @return Array
      */
-    public function listing() {     
-        $sql = 'select * from '.$this->table;
+    public function listing() {
+        $sql = 'select * from ' . $this->table;
         return $this->db->query($sql, \PDO::FETCH_ASSOC);
     }
 

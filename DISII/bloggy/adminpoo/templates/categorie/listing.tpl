@@ -12,7 +12,7 @@
             <tr>
                 {foreach from=$categories  key=clef item=categorie}
                     {if $clef == 'idCategories'}
-                        <td><a href="./index.php?page=categorie&action=edit&id=<?=$valeur;?>">+</a>&nbsp;<a href="./index.php?page=categorie&action=delete&id=<?=$valeur;?>">-</a></td>
+                        <td><a href="./index.php?page=categorie&action=edit&id={$categorie}">+</a>&nbsp;<a href="./index.php?page=categorie&action=delete&id={$categorie}">-</a></td>
                     {else}
                         <td>{$categorie}</td>
                     {/if}
