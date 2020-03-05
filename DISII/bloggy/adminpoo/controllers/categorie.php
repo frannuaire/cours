@@ -8,7 +8,7 @@ $categorie = new CategorieModels();
 
 switch ($_GET['action']) {
     case 'listing':
-        $vue['titre'] = 'Listing categorie';
+      //  $vue['titre'] = 'Listing categorie';
         //   $vue['listing'] = $categorie->listing();
         $log = new Logger('name');
         $log->pushHandler(new StreamHandler('log/app.log', Logger::WARNING));
@@ -16,8 +16,8 @@ switch ($_GET['action']) {
 // add records to the log
         $log->warning('acces cat');
       
-        $smarty->assign('titre', 'Listing categorie');
-        $smarty->assign('listing', $categorie->listing());
+   //     $smarty->assign('titre', 'Listing categorie');
+   //     $smarty->assign('listing', $categorie->listing());
         break;
     case 'edit':
         $vue['titre'] = 'Modification categorie';
